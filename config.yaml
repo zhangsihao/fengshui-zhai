@@ -1,0 +1,20 @@
+# ============================================
+# 住宅户型分析 - 模型配置文件
+# 复制此文件为 config.yaml 并填入你的配置
+# ============================================
+
+# 大模型 API 配置
+model:
+  # API 基础地址 (兼容 OpenAI 格式的接口)
+  base_url: "https://api.example.com/v1"
+  # API Key
+  api_key: "your-api-key-here"
+  # 模型名称
+  model_name: "your-model-name"
+
+# 服务配置
+server:
+  # Flask 后端端口
+  backend_port: 5000
+  # Streamlit 前端端口
+  frontend_port: 8501
