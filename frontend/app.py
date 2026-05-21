@@ -46,12 +46,12 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image(uploaded_file, caption="户型图预览", use_container_width=True)
+        st.image(uploaded_file, caption="户型图预览", width='stretch')
 
     st.divider()
 
     # 分析按钮
-    if st.button("🔍 分析户型", type="primary", use_container_width=True):
+    if st.button("🔍 分析户型", type="primary", width='stretch'):
         with st.spinner("AI 正在分析中，请稍候..."):
             try:
                 # 上传图片到后端
@@ -79,7 +79,7 @@ if uploaded_file is not None:
                             data=report_text,
                             file_name=f"户型分析报告_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
                             mime="text/plain",
-                            use_container_width=True,
+                            width='stretch',
                         )
                     else:
                         st.error(f"分析失败: {data.get('error', '未知错误')}")
